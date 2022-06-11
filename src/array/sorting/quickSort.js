@@ -12,17 +12,13 @@ function partition(arr, start, end) {
   let pivot = arr[end];
   for (let i = start; i <= end; i++) {
     if (pivot > arr[i]) {
-      let temp = arr[partitionIndex];
-      arr[partitionIndex] = arr[i];
-      arr[i] = temp;
+      [arr[partitionIndex], arr[i]] = [arr[i], arr[partitionIndex]];
       partitionIndex++;
     }
   }
-  let temp = arr[partitionIndex];
-  arr[partitionIndex] = pivot;
-  arr[end] = temp;
+  [arr[partitionIndex], arr[end]] = [arr[end], arr[partitionIndex]];
   return partitionIndex;
 }
-const input = [1, 4, 7, 9, 2, 3, 5, 10];
+const input = [1, 4, 7, 9, 10, 3, 5, 2];
 quickSort(input, 0, input.length - 1);
 console.log(input);

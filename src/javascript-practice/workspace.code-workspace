@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "../.."
+    },
+    {
+      "path": "../../../bfe-dev-solution"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "algorithms-and-datastructures"
+  }
+}

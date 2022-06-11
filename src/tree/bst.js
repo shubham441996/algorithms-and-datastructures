@@ -114,6 +114,18 @@ class BinarySearchTree {
     traverse(current);
     return visited;
   }
+  invertBinaryTree() {
+    let stack = [];
+    stack.push(this.root);
+    while (stack.length) {
+      let current = stack.pop();
+      if (current) {
+        [current.left, current.right] = [current.right, current.left];
+        stack.push(current.left, current.right);
+      }
+    }
+    return this.root;
+  }
 }
 let bst = new BinarySearchTree();
 bst.insert(6);
@@ -127,5 +139,5 @@ bst.insert(1);
 bst.insert(3);
 //console.log(bst);
 // console.log(bst.find(4));
-console.log(bst.dfsInOrder());
+console.log(bst.invertBinaryTree());
 module.exports = { bst };

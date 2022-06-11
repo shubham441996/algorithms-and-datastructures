@@ -1,3 +1,5 @@
+// This Algorithm will be great when we are sorting smallestElement to its location.
+
 function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     let smallestIndex = i;
@@ -6,9 +8,7 @@ function selectionSort(arr) {
         smallestIndex = j;
       }
     }
-    let temp = arr[smallestIndex];
-    arr[smallestIndex] = arr[i];
-    arr[i] = temp;
+    [arr[smallestIndex], arr[i]] = [arr[i], arr[smallestIndex]];
   }
   return arr;
 }

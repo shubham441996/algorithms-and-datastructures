@@ -24,7 +24,7 @@ function binarySearchRecursive(arr, start, end, key) {
     if (arr[mid] === key) {
       return mid;
     } else if (arr[mid] > key) {
-      return binarySearchRecursive(arr, start, mid, key);
+      return binarySearchRecursive(arr, start, mid - 1, key);
     } else {
       return binarySearchRecursive(arr, mid + 1, end, key);
     }

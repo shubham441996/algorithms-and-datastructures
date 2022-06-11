@@ -48,3 +48,4 @@ let printMyDetailsFromMyBind = obj1.printFullName.myBind(
 );
 
 printMyDetailsFromMyBind("This will Work");
+
