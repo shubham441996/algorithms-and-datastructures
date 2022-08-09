@@ -9,5 +9,5 @@ function pow(a, b) {
   }
   return res;
 }
-let result = pow(2, 5,10);
+let result = pow(2, 5);
 console.log(result);

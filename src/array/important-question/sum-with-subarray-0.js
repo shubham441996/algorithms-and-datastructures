@@ -11,5 +11,5 @@ function sumWithSubArray0(ele) {
   }
   return false;
 }
-let input = [4, 2, 1, 1, 6];
+let input = [4, 2, -1, 1, 6];
 console.log(sumWithSubArray0(input));
